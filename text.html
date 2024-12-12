@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Text Editor</title>
+    <link rel="stylesheet" href="text.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Text Editor</h1>
+    </div>
+    <div class="editor-container">
+        <div class="toolbar">
+            <!-- Font Controls -->
+            <select id="font-family">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+            <select id="font-size">
+                <option value="12px">12</option>
+                <option value="14px">14</option>
+                <option value="16px" selected>16</option>
+                <option value="18px">18</option>
+                <option value="24px">24</option>
+            </select>
+            <input type="color" id="text-color" title="Text Color">
+            <input type="color" id="bg-color" title="Background Color">
+
+            <!-- Text Formatting -->
+            <button id="bold-btn" title="Bold"><b>B</b></button>
+            <button id="italic-btn" title="Italic"><i>I</i></button>
+            <button id="underline-btn" title="Underline"><u>U</u></button>
+            <button id="strikethrough-btn" title="Strikethrough"><s>S</s></button>
+
+            <!-- Alignment -->
+            <select id="text-align">
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+                <option value="justify">Justify</option>
+            </select>
+
+            <!-- File Operations -->
+            <button id="save-btn" title="Save">💾 Save</button>
+            <input type="file" id="load-file" style="display:none;" accept=".txt">
+            <!-- <button id="load-btn" title="Load">📂 Load</button> -->
+
+            <!-- Search & Replace -->
+            <button id="search-replace-btn">🔍 Search/Replace</button>
+        </div>
+
+        <div id="text-input" contenteditable="true" placeholder="Start typing your text here..."></div>
+
+        <div class="search-replace" id="search-replace-container">
+            <input type="text" id="search-input" placeholder="Search">
+            <input type="text" id="replace-input" placeholder="Replace">
+            <div>
+                <label><input type="checkbox" id="case-sensitive"> Case Sensitive</label>
+                <label><input type="checkbox" id="whole-word"> Whole Word</label>
+            </div>
+            <div>
+                <button id="find-btn">Find</button>
+                <button id="replace-btn">Replace</button>
+                <button id="replace-all-btn">Replace All</button>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span id="word-count">Words: 0</span>
+            <span id="char-count">Characters: 0</span>
+        </div>
+    </div>
+
+    <script src="text.js"></script>
+</body>
+</html>

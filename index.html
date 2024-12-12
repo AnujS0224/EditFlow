@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EditFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1 class="app-name">EditFlow</h1>
+      <div class="header-buttons">
+        <button id="drawingAppBtn">Drawing App</button>
+        <button id="imageEditorBtn">
+          <a href="imageEditor.html" style="text-decoration: none;"> Image Editor</a>
+        </button>
+
+        <button id="imageEditorBtn">
+          <a href="task.html" style="text-decoration: none;">Task Manager</a>
+        </button>
+
+        <button id="imageEditorBtn">
+          <a href="text.html" style="text-decoration: none;">Text Editor</a>
+        </button>
+
+        <button id="themeToggle">Switch to Dark Mode</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="controls">
+      <label for="colorPicker">Brush Color:</label>
+      <input type="color" id="colorPicker" value="#000000">
+
+      <label for="canvasColorPicker">Canvas Color:</label>
+      <input type="color" id="canvasColorPicker" value="#ffffff">
+
+      <label for="brushSize">Brush Size:</label>
+      <input type="number" id="brushSize" min="1" max="50" value="5">
+
+      <label for="shapeSelect">Shape:</label>
+      <select id="shapeSelect">
+        <option value="freehand">Freehand</option>
+        <option value="line">Line</option>
+        <option value="rectangle">Rectangle</option>
+        <option value="circle">Circle</option>
+      </select>
+
+      <button id="eraser">Eraser OFF</button>
+      <button id="clearCanvas">Clear Canvas</button>
+      <button id="download">Download</button>
+      <button id="undo">Undo</button>
+      <button id="redo">Redo</button>
+    </div>
+    <canvas id="drawingCanvas"></canvas>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
